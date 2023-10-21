@@ -16,7 +16,7 @@ Welcome to the Get YouTube Subscribers project! This project is developed by Kun
 
 ## API Routes
 
-The API has several endpoints that let users get data in JSON format, such as: , and 
+The API has several endpoints that let users get data in JSON format, such as: 
 
 1. ( http://localhost:3000/subscribers)
    an endpoint that returns a list of all subscribers
@@ -42,7 +42,7 @@ Start the server by nodemon index.js
 
 2. **Installation**: Navigate to the project directory and install the required dependencies.
 
- npm install
+       npm install
 
 3. **Get Started**: Type "noedmon index.js" in terminal to get started.
    
