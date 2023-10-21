@@ -74,12 +74,6 @@ img{
             background-color: #218838;
         }
 
-        /* .flex-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        } */
-
         .flex-container input {
             margin-right: 10px;
             font-family: 'Poppins', sans-serif;
@@ -146,9 +140,7 @@ margin-left: 10px;
             to Retrieve a list of all subscribers.</h4>
             <h4>
                 <button id="subscriberNameButton">Click Here !</button>
-                To Get subscribers' names and subscribed channels.</h4>
-        
-            
+                To Get subscribers' names and subscribed channels.</h4>            
        
         
         <div class="flex-container">
@@ -199,7 +191,6 @@ margin-left: 10px;
                 // Get the value from the input field
                 var specificId = document.getElementById("subscriberIdInput").value;
 
-                // Check if the input is empty
                 if (specificId === "") {
                     alert("Please enter an ID.");
                 } else {
@@ -207,10 +198,10 @@ margin-left: 10px;
                     window.location.href = "https://youtubesubscriber-8f2t.onrender.com/subscribers/" + specificId;
                 }
             });
-             // Add a click event listener to the "API Docs" button
+            
              apiDocsButton.addEventListener("click", function() {
     // Open the API documentation link in a new tab
-    window.open("https://youtubesubscriber-8f2t.onrender.com/api-docs/", "_blank");
+    window.open("https://youtubesubscriber-8f2t.onrender.com/api-docs/","_blank");
 });
    });
 

@@ -1,24 +1,20 @@
-// // Import required modules
-const express = require("express");
-const swaggerUi = require("swagger-ui-express");
-const swaggerJSDoc = require("swagger-jsdoc");
-
-const app = express();
-
 // Import required modules
-const Subscriber = require("./models/subscribers"); // Import the Subscriber model
+const express = require("express");
+const swaggerJSDoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+const app = express();
+const Subscriber = require("./models/subscribers");
 
-// Middleware to parse JSON requests
-app.use(express.json());
+app.use(express.json()); // Middleware to parse JSON requests
 
-// Serve static files from the current directory
-app.use(express.static(__dirname));
+app.use(express.static(__dirname)); // Serve static files from the current directory
 
 // Route to serve the homepage
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+// Introducing Swagger for API documentation and testing framework.
 /**
  * @swagger
  * /subscribers:
@@ -56,6 +52,8 @@ app.get("/", (req, res) => {
  *       500:
  *         description: Internal Server Error
  */
+
+// Code for handling various requests & responses
 app.get("/subscribers", async (req, res) => {
   try {
     const subscribers = await Subscriber.find();
@@ -65,6 +63,7 @@ app.get("/subscribers", async (req, res) => {
   }
 });
 
+// Creaate New Subscsriber with given details
 app.post("/subscribers", async (req, res) => {
   try {
     const { name, subscribedChannel } = req.body;
@@ -95,7 +94,7 @@ app.post("/subscribers", async (req, res) => {
  *         description: Successful response
  *       500:
  *         description: Internal Server Error
- *   
+ *
  */
 app.get("/subscribers/name", async (req, res) => {
   try {
@@ -107,7 +106,6 @@ app.get("/subscribers/name", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-
 
 /**
  * @swagger
@@ -127,7 +125,7 @@ app.get("/subscribers/name", async (req, res) => {
  *         description: Successful response
  *       400:
  *         description: Subscriber not found
- *   
+ *
  */
 app.get("/subscribers/:id", async (req, res) => {
   try {
@@ -141,7 +139,7 @@ app.get("/subscribers/:id", async (req, res) => {
   }
 });
 
-// Swagger configuration
+// Code for Swagger configuration
 const swaggerDefinition = {
   openapi: "3.0.0",
   info: {
@@ -163,7 +161,7 @@ const options = {
 
 const swaggerSpec = swaggerJSDoc(options);
 
-// Serve Swagger documentation using Swagger UI
+// This is to serve Swagger documentation using Swagger UI
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 module.exports = app;
