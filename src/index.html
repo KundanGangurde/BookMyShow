@@ -5,41 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get YouTube Subscriber</title>
     <style>
-        body
-         
+    
+  @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
         .container {
-            max-width: 600px;
+            max-width: 600px        ;
             margin: 0 auto;
             padding: 40px;
-            border-radius: 10px;
+         margin-top: 90px;
+         border-bottom-left-radius: 140px;
+         border-top-right-radius: 140px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: url(  https://www.css-gradient.com/?c1=d4337a&c2=882997&gt=l&gd=dcc);
             background: rgba(226, 88, 149, 1.0);
-background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1.0));
+background: linear-gradient(60deg, rgb(255, 255, 255), rgb(255, 0, 0));
         }
-
+img{
+    width:150px;
+    margin-bottom:5px;
+    margin-top:-20px;
+    
+    
+}
         h1 {
             margin-top: 5px;
             color: #0c0c0c;
             font-size: 36px;
             white-space: nowrap;
+            font-family: 'Lobster Two', sans-serif;
+            margin-left: 10px;
         }
 
         button {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #2afbff;
+            color: #060505;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-size: 16px;
             padding: 10px 20px;
             margin: 10px;
             cursor: pointer;
             transition: background-color 0.3s;
+            
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #000000;
+            color:white;
+            
         }
 
         input[type="text"] {
@@ -59,20 +74,39 @@ background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1
             background-color: #218838;
         }
 
-        .flex-container {
+        /* .flex-container {
             display: flex;
             justify-content: center;
             align-items: center;
-        }
+        } */
 
         .flex-container input {
             margin-right: 10px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .Subscribers {
             color: #564045;
             padding-left: 12rem;
         }
+
+        #subscriberIdInput{
+            border-radius: 50px;
+width:50%;
+margin-left: 10px;
+        }
+
+        h4{
+            font-family: 'Poppins', sans-serif;
+        }
+        h5{
+            margin-left: 15px;
+            font-size: medium;
+        }
+
+      #apidoc{
+        margin-left: 15px;
+      }
 
         /* Additional styles for smaller screens */
         @media screen and (max-width: 768px) {
@@ -101,35 +135,36 @@ background: linear-gradient(45deg, rgba(226, 88, 149, 1.0), rgba(179, 77, 196, 1
         }
     </style>
 </head>
-<!-- <body>
-    <img src="https://www.almabetter.com/_next/image?url=https%3A%2F%2Falmablog-media.s3.ap-south-1.amazonaws.com%2FAlma_Better_Logo_4d9d929fe6.png&w=256&q=75" alt="AlmaBetter" style="width:20rem; margin-bottom: 20px; margin-left:450px ;"> -->
+<body>
+ 
     <div class="container">
-        <h1>Get YouTube Subscribers</h1>
-        <h4>Click Here  
-        <button id="subscriberButton" >Subscribers</button>
-        to Retrieve a list of all subscribers.</h4>
-        <h4>Click 
-        <button id="subscriberNameButton">Subscriber by Name</button>
-        For subscribers' names and subscribed channels.</h4>
+        <img  src= "allmalogo.png">
+        <h1>Get YouTube Subscribers !</h1>
+        
+        <h4>
+            <button id="subscriberButton" >Click Here !</button>
+            to Retrieve a list of all subscribers.</h4>
+            <h4>
+                <button id="subscriberNameButton">Click Here !</button>
+                To Get subscribers' names and subscribed channels.</h4>
         
             
        
         
         <div class="flex-container">
-            <input type="text" id="subscriberIdInput" placeholder="Enter ID to Get a Subscriber Info by their ID ">
-            <button id="subscriberIdButton">Subscriber by ID</button>
+            <input type="text" id="subscriberIdInput" placeholder="Enter ID To Get A Subscriber Info By Their ID">
+            <button id="subscriberIdButton">Subscriber By ID</button>
         </div>
-        <h5><b> Sample id :- </b> ( 6532bbdae2cdc202e85abd7f )</h5>
+        <h5><b> # Sample ID:- </b> ( 6532c2d834f3b90037cdc483 )</h5>
        
-        <br/>
-
-
-        <h4> Go to 
-          <button style="color: rgb(237, 232, 232); background-color: #0c0c0c;" id="api-docs" target="_blank">API_Doc</button>
-          To Test Complete Functionality</h4>
+        
+        <h4 id="apidoc"> Go to
+            <button style="color: rgb(237, 232, 232); background-color: #0c0c0c;" id="api-docs" target="_blank">API_Doc</button>
+            To Test Complete Functionality.</h4>
        
 
     <body>
+  
   
 
     <script>
