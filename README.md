@@ -1,5 +1,5 @@
 # AlmaBetter Backend Project
-## YoutubeSubscriber([Website](https://youtubesubscriber-8f2t.onrender.com))
+## Get Youtube Subscriber([Website](https://youtubesubscriber-8f2t.onrender.com))
 
 ## Table of Contents
 
